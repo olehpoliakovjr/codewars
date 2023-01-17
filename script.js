@@ -55,7 +55,48 @@ var countSheep = function (num){
     }
     return str;
 }
-console.log(countSheep(3));
+countSheep(5);
+
+
+//
+function evenOrOdd(number) {
+    if (number%2 == 0) {
+        return "Even";
+    } else {
+        return "Odd";
+    }
+}
+evenOrOdd(5);
+
+//
+
+function check(a, x) {
+        if (a.includes(x)){
+            return true;
+        } else if (!a.includes(x)){
+            return false;
+        } else {
+            return "";
+        }
+}
+check([1,5,7,9,0,1],1);
+
+
+function grow(x){
+    if (x !== null){
+        return  x.reduce((a, b) => a * b);
+    } else {
+        return "";
+    }
+}
+grow([1,3,4,5])
+
+//
+
+function findNeedle(haystack) {
+    return `"found the needle at position ${haystack.indexOf("needle")}`
+}
+
 
 
 
