@@ -97,6 +97,46 @@ function findNeedle(haystack) {
     return `"found the needle at position ${haystack.indexOf("needle")}`
 }
 
+// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with 1
+// Return the resulting string.
+// Note: input will never be an empty string
+
+function fakeBin(x){
+    let result = '';
+    for(let i = 0; i < x.length; i++){
+        if (x[i] < 5){
+            result += 0;
+        } else {
+            result +=1
+        }
+    }
+    return result;
+}
+fakeBin(511);
+
+//Given an array of integers as strings and numbers,return the sum of the array values as if all were numbers
+// Return your answer as a number.
+
+function sumMix(x){
+    let result = 0;
+    for (let n of x) {
+        result += parseInt(n);
+    }
+    return result;
+}
+console.log(sumMix([1,5,'4','2']));
+
+
+//You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
+// If it is a square, return its area. If it is a rectangle, return its perimeter.
+
+const areaOrPerimeter = function(l , w) {
+    if (l == w){
+        return l * w;
+    } else if(l !== w){
+        return ((l * 2)+(w * 2));
+    }
+};
 
 
 
