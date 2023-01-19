@@ -124,7 +124,7 @@ function sumMix(x){
     }
     return result;
 }
-console.log(sumMix([1,5,'4','2']));
+sumMix([1,5,'4','2']);
 
 
 //You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
@@ -169,7 +169,7 @@ digitize(35213); // 1 3 2 5 3
 function removeChar(str){
     return str.slice(1, -1)
 }
-console.log(removeChar("hello"))
+removeChar("hello");
 
 // Your task is to make a function that can take any non-negative integer as an argument
 // and return it with its digits in descending order.
@@ -198,13 +198,13 @@ past(1,2,3);
 function litres(time) {
     return Math.floor(time * 0.5);
 }
-console.log(litres(3))
+litres(3);
 
 
 function otherAngle(a, b) {
     return 180 - (a + b);
 }
-console.log(otherAngle(56,20))
+otherAngle(56,20);
 
 //Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
 //n -number s-string
@@ -235,7 +235,7 @@ function sumArray (numbers) {
         return 0;
     }
 }
-console.log(sumArray([1,5,-10]))
+sumArray([1,5,-10])
 
 // In this little assignment you are given a string of space separated numbers,
 // and have to return the highest and lowest number.
@@ -244,7 +244,104 @@ function highAndLow(numbers){
     numbers = numbers.split(' ')
     return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
 }
-console.log(highAndLow("3 6 9 1 10 45 31 22 67"))
+highAndLow("3 6 9 1 10 45 31 22 67");
+
+//
+
+function friend(friends){
+    let arr = [];
+    for (let i = 0; i < friends.length; i++){
+        if (friends[i].length === 4){
+            arr.push(friends[i]);
+        }
+    }
+    return arr;
+
+}
+friend(["mark","oleh","andrii",1,"sasha","alex"]);
+
+// delete all vowel letters
+
+function disemvowel(str) {
+    return str.replace(/[aeiouy]/gi, '')
+}
+disemvowel("This website is for losers LOL!");
+
+//
+
+function booleanToString(b){
+    return String(b);
+}
+
+//Given an array of integers your solution should find the smallest integer.
+// Given [34, 15, 88, 2] your solution will return 2
+// You can assume, for the purpose of this kata, that the supplied array will not be empty.
+
+function findSmallestInt(args) {
+    return Math.min(...args);
+}
+findSmallestInt([78,56,232,12,8,-32]);
+
+//Implement a function that accepts 3 integer values a, b, c.
+// The function should return true if a triangle can be built with the sides of given length and false in any other case.
+
+function isTriangle(a,b,c){
+    return a + b > c && a + c > b && b + c > a;
+}
+isTriangle(1,2,3);
+
+//Complete the function that accepts a string parameter, and reverses each word in the string.
+// All spaces in the string should be retained.
+
+function reverseWords(str) {
+    return str.split("").reverse().join("").split(" ").reverse().join(" ")
+}
+reverseWords("This is an example!")
+
+//
+
+function smash (words) {
+    return words.join().replace(/[,]/gi, ' ')
+}
+smash(["hello", "world"]);
+
+// In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G".
+
+function DNAStrand(dna) {
+
+    let letters = {
+        'A': 'T',
+        'T': 'A',
+        'C': 'G',
+        'G': 'C'
+    };
+
+    let arr = [];
+    for (let i = 0; i < dna.length; i++) {
+        arr[i] = letters[dna[i]];
+    }
+
+    return arr.join('');
+}
+DNAStrand("GTAT");
+
+// 3 по цене 2   1 - 3 = 3
+
+function mango(quantity, price){
+    let qty = quantity - Math.floor(quantity / 2);
+    return qty * price;
+}
+console.log(mango(7,3))
+
+
+
+
+
+
+
+
+
+
 
 
 

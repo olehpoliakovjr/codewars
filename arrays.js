@@ -53,6 +53,11 @@ console.log(firstArray)
 Array.from() // метод создаёт новый экземпляр Array из массивоподобного или итерируемого объекта.
 // (Array.from('foo'));
 // Expected output: Array ["f", "o", "o"]
+firstArray.filter() // Метод filter() создаёт новый массив со всеми элементами,
+                    // прошедшими проверку, задаваемую в передаваемой функции.
+firstArray.push() // this method add an element into array
+
+
 
 
 
