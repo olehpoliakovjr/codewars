@@ -325,13 +325,135 @@ function DNAStrand(dna) {
 }
 DNAStrand("GTAT");
 
-// 3 по цене 2   1 - 3 = 3
+// 3 products for 2 + 1
 
 function mango(quantity, price){
     let qty = quantity - Math.floor(quantity / 2);
     return qty * price;
 }
 console.log(mango(7,3))
+
+//Given n, take the sum of the digits of n. If that value has more than one digit,
+// continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.
+
+function digitalRoott(n) {
+    let result;
+    result = n;
+    let array = Array.from(n.toString(), Number)
+    for (let i = 0; i < array.length; i++){
+        if (result.length > 2){
+            for (let j = 0; j < result.length; j++){
+                result = array.reduce((a,b) => a + b)
+            }
+        } else {
+           return  result = array.reduce((a,b) => a + b)
+        }
+    }
+    result = array.reduce((a,b) => a + b)
+    return result
+}
+digitalRoott(83990)
+//
+
+function digitalRoot(n) {
+    if (n < 10) return n;
+    return digitalRoot(
+        n.toString().split('').reduce((acc, d) => {
+            return acc + +d;
+        },0));
+}
+digitalRoot(5769)
+
+// Write a function which calculates the average of the numbers in a given list.
+
+function findAverage(array) {
+    if (array.length !== 0){
+      return array.reduce((a,b) => a + b) / array.length;
+    } else {
+        return 0
+    }
+}
+findAverage([1,2,3,4])
+
+// Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+function solutions(str, ending){
+    return str.endsWith(ending);
+}
+console.log(solutions('abc', 'd'))
+
+// Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
+function getGrade (s1, s2, s3) {
+    let average = Math.ceil((s1 + s2 + s3) / 3);
+    console.log(average)
+    if (average >= 90){
+        return 'A'
+    } else if (average >= 80 && average < 90){
+        return "B"
+    } else if (average >= 70 && average < 80){
+        return "C"
+    } else if (average >= 60 && average < 70){
+        return "D"
+    } else if((average >= 0 && average < 60)){
+        return "F"
+    }
+}
+getGrade(89,89,90);
+
+//Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+function greet (name, owner) {
+    if (arguments[0] === arguments[1]){
+        return 'Hello boss'
+    } else if (owner){
+        return 'Hello guest'
+    }
+}
+greet('Daniel', 'Daniel')
+
+//
+
+function areYouPlayingBanjo(name) {
+    if (name.charAt(0) === "R" || "r"){
+        return name + " plays banjo"
+    } else {
+        return name + " does not play banjo"
+    }
+}
+
+// In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+
+function makeNegative(num) {
+    if (Math.sign(num) == 1){
+        return -num;
+    } else if (Math.sign(num) !== 1){
+        return num;
+    }
+}
+makeNegative(13);
+//!!
+function betterThanAverage(classPoints, yourPoints){
+    let result;
+    result = classPoints.reduce((a,b) => a + b,0) / classPoints.length;
+    if (yourPoints >= result){
+        result = true;
+    } else {
+        result = false;
+    }
+    return result;
+}
+betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9);
+
+//Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers.
+//No floats or non-positive integers will be passed.
+
+function sumTwoSmallestNumbers(numbers) {
+
+}
+
+
+
+
+
+
 
 
 
