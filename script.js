@@ -445,9 +445,16 @@ betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9);
 //Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers.
 //No floats or non-positive integers will be passed.
 
-function sumTwoSmallestNumbers(numbers) {
-
+function sumTwoSmallestNumbers(numbers){
+    let array
+    array = numbers.sort((a,b) => a - b).slice(0,2).reduce((a,b) => a + b);
+    return array;
 }
+console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]))
+
+
+
+
 
 
 
